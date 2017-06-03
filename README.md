@@ -1,2 +1,0 @@
-# sorlandsbrygg.no
-Sørlandsbrygg
