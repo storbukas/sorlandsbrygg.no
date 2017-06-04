@@ -76,7 +76,7 @@
     <header>
         <div class="container">
             <div class="intro-text">
-              <img src="img/logos/sorlandsbrygg-container-logo.png" alt="Sørlandsbrygg Logo" />
+              <img class="img-responsive img-centered" src="img/logos/sorlandsbrygg-container-logo.png" alt="Sørlandsbrygg Logo" />
             </div>
         </div>
     </header>
@@ -305,7 +305,7 @@
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
-                        <li><a href="#">Juridisk</a>
+                        <li><a href="#legalModal" data-toggle="modal">Juridisk</a>
                         </li>
                     </ul>
                 </div>
@@ -313,10 +313,7 @@
         </div>
     </footer>
 
-    <!-- Portfolio Modals -->
-    <!-- Use the modals below to showcase details about your portfolio projects! -->
-
-    <!-- Portfolio Modal 1 -->
+    <!-- Hip Hop -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -330,7 +327,6 @@
                     <div class="row">
                         <div class="col-lg-6 col-lg-offset-3">
                             <div class="modal-body">
-                                <!-- Project Details Go Here -->
                                 <h2>Hip Hop</h2>
                                 <p class="item-intro text-muted">India Pale Ale</p>
                                 <img class="img-responsive img-centered" src="img/portfolio/hops.png" alt="">
@@ -344,7 +340,7 @@
         </div>
     </div>
 
-    <!-- Portfolio Modal 2 -->
+    <!-- Brown Bear -->
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -371,7 +367,7 @@
         </div>
     </div>
 
-    <!-- Portfolio Modal 3 -->
+    <!-- Columbus Discovery -->
     <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -385,7 +381,6 @@
                     <div class="row">
                         <div class="col-lg-6 col-lg-offset-3">
                             <div class="modal-body">
-                                <!-- Project Details Go Here -->
                                 <h2>Columbus Discovery</h2>
                                 <p class="item-intro text-muted">American Pale Ale</p>
                                 <img class="img-responsive img-centered" src="img/portfolio/columbus-discovery.png" alt="">
@@ -399,7 +394,7 @@
         </div>
     </div>
 
-    <!-- Portfolio Modal 4 -->
+    <!-- Weizbeer -->
     <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -413,7 +408,6 @@
                     <div class="row">
                         <div class="col-lg-6 col-lg-offset-3">
                             <div class="modal-body">
-                                <!-- Project Details Go Here -->
                                 <h2>Weizbeer</h2>
                                 <p class="item-intro text-muted">Bavarian Wheat Beer</p>
                                 <img class="img-responsive img-centered" src="img/portfolio/weizbeer.png" alt="">
@@ -427,7 +421,7 @@
         </div>
     </div>
 
-    <!-- Portfolio Modal 5 -->
+    <!-- Blacksmith -->
     <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -441,7 +435,6 @@
                     <div class="row">
                         <div class="col-lg-6 col-lg-offset-3">
                             <div class="modal-body">
-                                <!-- Project Details Go Here -->
                                 <h2>Blacksmith</h2>
                                 <p class="item-intro text-muted">Irish Stout</p>
                                 <img class="img-responsive img-centered" src="img/portfolio/blacksmith.png" alt="">
@@ -455,7 +448,7 @@
         </div>
     </div>
 
-    <!-- Portfolio Modal 6 -->
+    <!-- Sørlandsøl -->
     <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -469,11 +462,35 @@
                     <div class="row">
                         <div class="col-lg-6 col-lg-offset-3">
                             <div class="modal-body">
-                                <!-- Project Details Go Here -->
                                 <h2>Sørlandsøl</h2>
                                 <p class="item-intro text-muted">German Lager</p>
                                 <img class="img-responsive img-centered" src="img/portfolio/sorlandsol.png" alt="">
                                 <p></p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Lukk</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Legal -->
+    <div class="portfolio-modal modal fade" id="legalModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <div class="modal-body">
+                                <h2>Juridisk</h2>
+                                <p>Bruk av alkohol kan gi ulike skadevirkninger. Nærmere informasjon finner du <a href="https://helsenorge.no/rus-og-avhengighet/alkohol/alkoholens-virkning-pa-kroppen">her</a></p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Lukk</button>
                             </div>
                         </div>
