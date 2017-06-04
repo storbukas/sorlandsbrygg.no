@@ -16,6 +16,9 @@ $(function() {
       var phone = $("input#phone").val();
       var message = $("textarea#message").val();
 
+      // parse newlines into html
+      message = message.replace(/\r?\n/g, '<br />');
+
       // for success/failure message
       var firstName = name;
 
