@@ -1,5 +1,4 @@
-// Contact Form Scripts
-
+// contact form scripts
 $(function() {
 
   $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
@@ -8,29 +7,32 @@ $(function() {
       // additional error messages or events
     },
     submitSuccess: function($form, event) {
-      event.preventDefault(); // prevent default submit behaviour
+      // prevent default submit behaviour
+      event.preventDefault();
+
       // get values from FORM
       var name = $("input#name").val();
       var email = $("input#email").val();
       var phone = $("input#phone").val();
       var message = $("textarea#message").val();
-      var firstName = name; // For Success/Failure Message
-      // Check for white space in name for Success/Fail message
+
+      // for success/failure message
+      var firstName = name;
+
+      // check for white space in name for success/fail message
       if (firstName.indexOf(' ') >= 0) {
         firstName = name.split(' ').slice(0, -1).join(' ');
       }
-      $.ajax({
-        url: "././mail/contact_me.php",
-        type: "POST",
-        data: {
+
+      // parameters: service_id, template_id, template_parameters
+      emailjs.send("gmail", "kontaktskjema", {
           name: name,
-          phone: phone,
           email: email,
+          phone: phone,
           message: message
-        },
-        cache: false,
-        success: function() {
-          // Success message
+        })
+        .then(function(response) {
+          // success message
           $('#success').html("<div class='alert alert-success'>");
           $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
@@ -39,20 +41,19 @@ $(function() {
           $('#success > .alert-success')
             .append('</div>');
 
-          //clear all fields
+          // clear all fields
           $('#contactForm').trigger("reset");
-        },
-        error: function() {
-          // Fail message
+        }, function(err) {
+          // fail message
           $('#success').html("<div class='alert alert-danger'>");
           $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
           $('#success > .alert-danger').append($("<strong>").text("Beklager " + firstName + ", det oppstod et problem. Prøv igjen senere!"));
           $('#success > .alert-danger').append('</div>');
-          //clear all fields
+
+          // clear all fields
           $('#contactForm').trigger("reset");
-        },
-      });
+        });
     },
     filter: function() {
       return $(this).is(":visible");
@@ -65,7 +66,7 @@ $(function() {
   });
 });
 
-/*When clicking on Full hide fail/success boxes */
+// when clicking on Full hide fail/success boxes
 $('#name').focus(function() {
   $('#success').html('');
 });
